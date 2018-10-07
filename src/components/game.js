@@ -3,7 +3,7 @@ import React from "react";
 import Header from "./header";
 import GuessSection from "./guess-section";
 import StatusSection from "./status-section";
-import InfoSection from ".info-section";
+import InfoSection from "./info-section";
 
 export default class Game extends React.Component {
   constructor(props) {
@@ -63,7 +63,7 @@ export default class Game extends React.Component {
       guesses.length
     } ${pluralize ? "guesses" : "guess"}`;
 
-    if (guess.length > 0) {
+    if (guesses.length > 0) {
       auralStatus += `${
         pluralize ? "In order of most- to least-recent, they are" : "It was"
       }: ${guesses.reverse().join(", ")}`;
